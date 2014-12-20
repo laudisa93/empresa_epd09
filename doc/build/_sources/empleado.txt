@@ -1,7 +1,7 @@
 Documentacion de empleado
 =========================
 
-.. automodule:: empleado
-.. autoclass:: empleado.Empleado
+.. automodule:: src.empleado
+.. autoclass:: src.empleado.Empleado
     :special-members:
     :members:

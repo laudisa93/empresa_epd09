@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>tests.test_departamento &mdash; documentación de empresa - v0.3</title>
+    
+    <link rel="stylesheet" href="../../_static/scrolls.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     'v0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/theme_extras.js"></script>
+    <link rel="top" title="documentación de empresa - v0.3" href="../../index.html" />
+    <link rel="up" title="Código de módulo" href="../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="../../index.html"
+          title="back to the documentation overview"><span>tests.test_departamento</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="#">tests.test_departamento</a>
+      </div>
+      <div id="contentwrapper">
+        
+  <h1>Código fuente para tests.test_departamento</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">TestCase</span>
+
+<span class="kn">from</span> <span class="nn">mockito</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="kn">from</span> <span class="nn">src.empleado</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">src.departamento</span> <span class="kn">import</span> <span class="o">*</span>
+
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;Laura&#39;</span>
+
+
+<div class="viewcode-block" id="TestDepartamento"><a class="viewcode-back" href="../../test_departamento.html#tests.test_departamento.TestDepartamento">[documentos]</a><span class="k">class</span> <span class="nc">TestDepartamento</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Clase TestDepartamento para testear los metodos de la clase Departamento del proyecto&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="TestDepartamento.test_get_salario_total"><a class="viewcode-back" href="../../test_departamento.html#tests.test_departamento.TestDepartamento.test_get_salario_total">[documentos]</a>    <span class="k">def</span> <span class="nf">test_get_salario_total</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Metodo test get salario total</span>
+
+<span class="sd">        Este metodo testea el correcto funcionamiento del metodo get_salario_total de la clase Departamento</span>
+<span class="sd">        creando tres objetos empleados mediante mocks y verificando el valor del salario total</span>
+
+<span class="sd">        :return: assertEqual</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        :raise assertEqual: si los valores de los salarios no coinciden</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">emp1</span> <span class="o">=</span> <span class="n">mock</span><span class="p">(</span><span class="n">Empleado</span><span class="p">)</span>
+        <span class="n">emp2</span> <span class="o">=</span> <span class="n">mock</span><span class="p">(</span><span class="n">Empleado</span><span class="p">)</span>
+        <span class="n">emp3</span> <span class="o">=</span> <span class="n">mock</span><span class="p">(</span><span class="n">Empleado</span><span class="p">)</span>
+
+        <span class="n">when</span><span class="p">(</span><span class="n">emp1</span><span class="p">)</span><span class="o">.</span><span class="n">get_salario</span><span class="p">()</span><span class="o">.</span><span class="n">thenReturn</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+        <span class="n">when</span><span class="p">(</span><span class="n">emp2</span><span class="p">)</span><span class="o">.</span><span class="n">get_salario</span><span class="p">()</span><span class="o">.</span><span class="n">thenReturn</span><span class="p">(</span><span class="mi">1500</span><span class="p">)</span>
+        <span class="n">when</span><span class="p">(</span><span class="n">emp3</span><span class="p">)</span><span class="o">.</span><span class="n">get_salario</span><span class="p">()</span><span class="o">.</span><span class="n">thenReturn</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+
+        <span class="n">dpto</span> <span class="o">=</span> <span class="n">Departamento</span><span class="p">(</span><span class="s">&quot;Empresa&quot;</span><span class="p">,</span> <span class="mi">123</span><span class="p">)</span>
+
+        <span class="n">dpto</span><span class="o">.</span><span class="n">aniadir_empleado</span><span class="p">(</span><span class="n">emp1</span><span class="p">)</span>
+        <span class="n">dpto</span><span class="o">.</span><span class="n">aniadir_empleado</span><span class="p">(</span><span class="n">emp2</span><span class="p">)</span>
+        <span class="n">dpto</span><span class="o">.</span><span class="n">aniadir_empleado</span><span class="p">(</span><span class="n">emp3</span><span class="p">)</span>
+
+        <span class="n">total</span> <span class="o">=</span> <span class="n">dpto</span><span class="o">.</span><span class="n">get_salario_total</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Test Salario total&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Salario total: &quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">total</span><span class="p">,</span> <span class="mi">4500</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestDepartamento.test_get_salario_total_mensual"><a class="viewcode-back" href="../../test_departamento.html#tests.test_departamento.TestDepartamento.test_get_salario_total_mensual">[documentos]</a>    <span class="k">def</span> <span class="nf">test_get_salario_total_mensual</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Metodo test para testear el correcto funcionamiento del metodo get_salario_total_mensual</span>
+
+<span class="sd">        Este metodo testea el correcto funcionamiento del metodo get_salario_total_mensual de la clase Departamento</span>
+<span class="sd">        creando tres objetos empleados mediante mocks y verificando el valor del salario total mensual</span>
+
+<span class="sd">        :return: assertEqual</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        :raise assertEqual: si los valores de los salarios no coinciden</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">emp1</span> <span class="o">=</span> <span class="n">mock</span><span class="p">(</span><span class="n">Empleado</span><span class="p">)</span>
+        <span class="n">emp2</span> <span class="o">=</span> <span class="n">mock</span><span class="p">(</span><span class="n">Empleado</span><span class="p">)</span>
+        <span class="n">emp3</span> <span class="o">=</span> <span class="n">mock</span><span class="p">(</span><span class="n">Empleado</span><span class="p">)</span>
+
+        <span class="n">when</span><span class="p">(</span><span class="n">emp1</span><span class="p">)</span><span class="o">.</span><span class="n">get_salario</span><span class="p">()</span><span class="o">.</span><span class="n">thenReturn</span><span class="p">(</span><span class="mi">12000</span><span class="p">)</span>
+        <span class="n">when</span><span class="p">(</span><span class="n">emp2</span><span class="p">)</span><span class="o">.</span><span class="n">get_salario</span><span class="p">()</span><span class="o">.</span><span class="n">thenReturn</span><span class="p">(</span><span class="mi">24000</span><span class="p">)</span>
+        <span class="n">when</span><span class="p">(</span><span class="n">emp3</span><span class="p">)</span><span class="o">.</span><span class="n">get_salario</span><span class="p">()</span><span class="o">.</span><span class="n">thenReturn</span><span class="p">(</span><span class="mi">36000</span><span class="p">)</span>
+
+        <span class="n">emp1</span><span class="o">.</span><span class="n">get_salario_mensual</span><span class="p">()</span>
+
+        <span class="n">dpto</span> <span class="o">=</span> <span class="n">Departamento</span><span class="p">(</span><span class="s">&quot;Empresa&quot;</span><span class="p">,</span> <span class="mi">123</span><span class="p">)</span>
+
+        <span class="n">dpto</span><span class="o">.</span><span class="n">aniadir_empleado</span><span class="p">(</span><span class="n">emp1</span><span class="p">)</span>
+        <span class="n">dpto</span><span class="o">.</span><span class="n">aniadir_empleado</span><span class="p">(</span><span class="n">emp2</span><span class="p">)</span>
+        <span class="n">dpto</span><span class="o">.</span><span class="n">aniadir_empleado</span><span class="p">(</span><span class="n">emp3</span><span class="p">)</span>
+
+        <span class="n">total_mensual</span> <span class="o">=</span> <span class="n">dpto</span><span class="o">.</span><span class="n">get_salario_total_mensual</span><span class="p">()</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Test Salario Mensual total&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Salario total mensual: &quot;</span><span class="p">,</span> <span class="n">total_mensual</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">total_mensual</span><span class="p">,</span> <span class="mi">6000</span><span class="p">)</span></div></div>
+</pre></div>
+
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2014, ldiasae.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b1.
+    </div>
+  </body>
+</html>

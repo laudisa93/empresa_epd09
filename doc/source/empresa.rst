@@ -1,7 +1,7 @@
 Documentacion de empresa
 ========================
 
-.. automodule:: Empresa
-.. autoclass:: Empresa.Empresa
+.. automodule:: src.Empresa
+.. autoclass:: src.Empresa.Empresa
     :special-members:
     :members:

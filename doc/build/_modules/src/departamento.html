@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>src.departamento &mdash; documentación de empresa - v0.3</title>
+    
+    <link rel="stylesheet" href="../../_static/scrolls.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     'v0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/theme_extras.js"></script>
+    <link rel="top" title="documentación de empresa - v0.3" href="../../index.html" />
+    <link rel="up" title="Código de módulo" href="../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="../../index.html"
+          title="back to the documentation overview"><span>src.departamento</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="#">src.departamento</a>
+      </div>
+      <div id="contentwrapper">
+        
+  <h1>Código fuente para src.departamento</h1><div class="highlight"><pre>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;Laura&#39;</span>
+
+
+<div class="viewcode-block" id="Departamento"><a class="viewcode-back" href="../../departamento.html#src.departamento.Departamento">[documentos]</a><span class="k">class</span> <span class="nc">Departamento</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Esta clase representa el departamento de una empresa&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Departamento.__init__"><a class="viewcode-back" href="../../departamento.html#src.departamento.Departamento.__init__">[documentos]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre_depto</span><span class="p">,</span> <span class="n">id_depto</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Metodo constructor de departamento</span>
+
+<span class="sd">        En este metodo se define un objeto de tipo Departamento con sus atributos</span>
+
+<span class="sd">        :param nombre_depto: nombre del departamento</span>
+<span class="sd">        :type nombre_depto: str</span>
+<span class="sd">        :param id_depto: numero de identificacion del departamento</span>
+<span class="sd">        :type id_depto: str</span>
+<span class="sd">        :param empleados: lista de empleados vacia</span>
+<span class="sd">        :type empleados: list</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre_depto</span> <span class="o">=</span> <span class="n">nombre_depto</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id_depto</span> <span class="o">=</span> <span class="n">id_depto</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">empleados</span> <span class="o">=</span> <span class="p">[]</span>
+</div>
+<div class="viewcode-block" id="Departamento.aniadir_empleado"><a class="viewcode-back" href="../../departamento.html#src.departamento.Departamento.aniadir_empleado">[documentos]</a>    <span class="k">def</span> <span class="nf">aniadir_empleado</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">empleado</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Metodo aniadir empleado</span>
+
+<span class="sd">        Este metodo se usa para aniadir un nuevo empleado a la lista de empleados del departamento</span>
+
+<span class="sd">        :param empleado: empleado que se va a aniadir a la lista de empleados del departamento</span>
+<span class="sd">        :type empleado: empleado</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">empleados</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">empleado</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Departamento.get_salario_total"><a class="viewcode-back" href="../../departamento.html#src.departamento.Departamento.get_salario_total">[documentos]</a>    <span class="k">def</span> <span class="nf">get_salario_total</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Metodo get del salario total</span>
+
+<span class="sd">        Este metodo toma la suma del salario total de todos los empleados del departamento</span>
+
+<span class="sd">        :param total: variable que guarda la suma de todos los salarios de los empleados del departamento</span>
+<span class="sd">        :return: total</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">empleado</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">empleados</span><span class="p">:</span>
+            <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">empleado</span><span class="o">.</span><span class="n">get_salario</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">total</span>
+</div>
+<div class="viewcode-block" id="Departamento.get_nombre_dpto"><a class="viewcode-back" href="../../departamento.html#src.departamento.Departamento.get_nombre_dpto">[documentos]</a>    <span class="k">def</span> <span class="nf">get_nombre_dpto</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Metodo get nombre del departamento</span>
+
+<span class="sd">        Este metodo toma el nombre del departamento</span>
+
+<span class="sd">        :return: nombre del departamento</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nombre_depto</span>
+</div>
+<div class="viewcode-block" id="Departamento.get_salario_total_mensual"><a class="viewcode-back" href="../../departamento.html#src.departamento.Departamento.get_salario_total_mensual">[documentos]</a>    <span class="k">def</span> <span class="nf">get_salario_total_mensual</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Metodo get salario mensual total</span>
+
+<span class="sd">        Este metodo calcula el salario total mensual de todos los empleados del departamento</span>
+
+<span class="sd">        :return: salario mensual total de todos los empleados del departamento</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_salario_total</span><span class="p">()</span> <span class="o">/</span> <span class="mf">12.0</span></div></div>
+</pre></div>
+
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2014, ldiasae.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b1.
+    </div>
+  </body>
+</html>

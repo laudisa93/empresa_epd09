@@ -1,7 +1,7 @@
 Documentacion de departamento
 =============================
 
-.. automodule:: departamento
-.. autoclass:: departamento.Departamento
+.. automodule:: src.departamento
+.. autoclass:: src.departamento.Departamento
     :special-members:
     :members:
