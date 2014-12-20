@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Documentacion de empleado &mdash; documentación de empresa - v0.3</title>
+    
+    <link rel="stylesheet" href="_static/scrolls.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'v0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="top" title="documentación de empresa - v0.3" href="index.html" />
+    <link rel="next" title="Documentacion de empresa" href="empresa.html" />
+    <link rel="prev" title="Documentacion de departamento" href="departamento.html" /> 
+  </head>
+  <body role="document">
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="index.html"
+          title="back to the documentation overview"><span>Documentacion de empleado</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="departamento.html">&laquo; Documentacion de departamento</a> |
+        <a href="#">Documentacion de empleado</a>
+        | <a href="empresa.html">Documentacion de empresa &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        
+  <div class="section" id="module-empleado">
+<span id="documentacion-de-empleado"></span><h1>Documentacion de empleado<a class="headerlink" href="#module-empleado" title="Enlazar permanentemente con este título">¶</a></h1>
+<dl class="class">
+<dt id="empleado.Empleado">
+<em class="property">class </em><code class="descclassname">empleado.</code><code class="descname">Empleado</code><span class="sig-paren">(</span><em>nombre</em>, <em>apellidos</em>, <em>dni</em>, <em>direccion</em>, <em>edad</em>, <em>email</em>, <em>salario</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/empleado.html#Empleado"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#empleado.Empleado" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Esta clase representa el empleado de un departamento</p>
+<dl class="method">
+<dt id="empleado.Empleado.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>nombre</em>, <em>apellidos</em>, <em>dni</em>, <em>direccion</em>, <em>edad</em>, <em>email</em>, <em>salario</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/empleado.html#Empleado.__init__"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#empleado.Empleado.__init__" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Metodo constructor de empleado</p>
+<p>En este metodo se define un objeto de tipo Empleado con sus atributos</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>nombre</strong> &#8211; nombre del empleado</li>
+<li><strong>apellidos</strong> &#8211; apellidos del empleado</li>
+<li><strong>dni</strong> &#8211; documento de identidad del empleado</li>
+<li><strong>direccion</strong> &#8211; direccion del empleado</li>
+<li><strong>edad</strong> &#8211; edad del empleado</li>
+<li><strong>email</strong> &#8211; correo electronico del empleado</li>
+<li><strong>salario</strong> &#8211; salario anual del empleado</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="empleado.Empleado.get_direccion">
+<code class="descname">get_direccion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/empleado.html#Empleado.get_direccion"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#empleado.Empleado.get_direccion" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Metodo get de la direccion</p>
+<p>Este metodo toma el valor de la direccion del empleado</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body">direccion del empleado</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Tipo del valor devuelto:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="empleado.Empleado.get_dni">
+<code class="descname">get_dni</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/empleado.html#Empleado.get_dni"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#empleado.Empleado.get_dni" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Metodo get del dni</p>
+<p>Este metodo toma el valor del dni del empleado</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body">dni del empleado</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Tipo del valor devuelto:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="empleado.Empleado.get_edad">
+<code class="descname">get_edad</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/empleado.html#Empleado.get_edad"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#empleado.Empleado.get_edad" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Metodo get de la edad</p>
+<p>Este metodo toma el valor de la edad del empleado</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body">edad del empleado</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Tipo del valor devuelto:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="empleado.Empleado.get_email">
+<code class="descname">get_email</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/empleado.html#Empleado.get_email"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#empleado.Empleado.get_email" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Metodo get del email</p>
+<p>Este metodo toma el valor del correo electronico del empleado</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body">email del empleado</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Tipo del valor devuelto:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="empleado.Empleado.get_nombre_apellidos">
+<code class="descname">get_nombre_apellidos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/empleado.html#Empleado.get_nombre_apellidos"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#empleado.Empleado.get_nombre_apellidos" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Metodo get del nombre y apellidos</p>
+<p>Este metodo toma el nombre completo del empleado que consta de su nombre y sus apellidos</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body">nombre y apelldos del empleado</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Tipo del valor devuelto:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="empleado.Empleado.get_salario">
+<code class="descname">get_salario</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/empleado.html#Empleado.get_salario"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#empleado.Empleado.get_salario" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Metodo get del salario</p>
+<p>Este metodo toma el valor del salario anual del empleado</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body">salario anual del empleado</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Tipo del valor devuelto:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="empleado.Empleado.get_salario_mensual">
+<code class="descname">get_salario_mensual</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/empleado.html#Empleado.get_salario_mensual"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#empleado.Empleado.get_salario_mensual" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Metodo get del salario mensual</p>
+<p>Este metodo toma el valor del salario mensual del empleado a partir de su
+salario anual dividiendolo entre 12</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body">salario mensual del empleado</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Tipo del valor devuelto:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2014, ldiasae.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b1.
+    </div>
+  </body>
+</html>

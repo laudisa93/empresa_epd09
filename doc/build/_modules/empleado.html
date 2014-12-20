@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>empleado &mdash; documentación de empresa - v0.3</title>
+    
+    <link rel="stylesheet" href="../_static/scrolls.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/theme_extras.js"></script>
+    <link rel="top" title="documentación de empresa - v0.3" href="../index.html" />
+    <link rel="up" title="Código de módulo" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="../index.html"
+          title="back to the documentation overview"><span>empleado</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="#">empleado</a>
+      </div>
+      <div id="contentwrapper">
+        
+  <h1>Código fuente para empleado</h1><div class="highlight"><pre>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;Laura&#39;</span>
+
+
+<div class="viewcode-block" id="Empleado"><a class="viewcode-back" href="../empleado.html#empleado.Empleado">[documentos]</a><span class="k">class</span> <span class="nc">Empleado</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Esta clase representa el empleado de un departamento&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Empleado.__init__"><a class="viewcode-back" href="../empleado.html#empleado.Empleado.__init__">[documentos]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">apellidos</span><span class="p">,</span> <span class="n">dni</span><span class="p">,</span> <span class="n">direccion</span><span class="p">,</span> <span class="n">edad</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">salario</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Metodo constructor de empleado</span>
+
+<span class="sd">        En este metodo se define un objeto de tipo Empleado con sus atributos</span>
+
+<span class="sd">        :param nombre: nombre del empleado</span>
+<span class="sd">        :param apellidos: apellidos del empleado</span>
+<span class="sd">        :param dni: documento de identidad del empleado</span>
+<span class="sd">        :param direccion: direccion del empleado</span>
+<span class="sd">        :param edad: edad del empleado</span>
+<span class="sd">        :param email: correo electronico del empleado</span>
+<span class="sd">        :param salario: salario anual del empleado</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">apellidos</span> <span class="o">=</span> <span class="n">apellidos</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dni</span> <span class="o">=</span> <span class="n">dni</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">direccion</span> <span class="o">=</span> <span class="n">direccion</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">edad</span> <span class="o">=</span> <span class="n">edad</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">salario</span> <span class="o">=</span> <span class="n">salario</span>
+</div>
+<div class="viewcode-block" id="Empleado.get_salario"><a class="viewcode-back" href="../empleado.html#empleado.Empleado.get_salario">[documentos]</a>    <span class="k">def</span> <span class="nf">get_salario</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Metodo get del salario</span>
+
+<span class="sd">        Este metodo toma el valor del salario anual del empleado</span>
+
+<span class="sd">        :return: salario anual del empleado</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">salario</span>
+</div>
+<div class="viewcode-block" id="Empleado.get_dni"><a class="viewcode-back" href="../empleado.html#empleado.Empleado.get_dni">[documentos]</a>    <span class="k">def</span> <span class="nf">get_dni</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Metodo get del dni</span>
+
+<span class="sd">        Este metodo toma el valor del dni del empleado</span>
+
+<span class="sd">        :return: dni del empleado</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dni</span>
+</div>
+<div class="viewcode-block" id="Empleado.get_nombre_apellidos"><a class="viewcode-back" href="../empleado.html#empleado.Empleado.get_nombre_apellidos">[documentos]</a>    <span class="k">def</span> <span class="nf">get_nombre_apellidos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Metodo get del nombre y apellidos</span>
+
+<span class="sd">        Este metodo toma el nombre completo del empleado que consta de su nombre y sus apellidos</span>
+
+<span class="sd">        :return: nombre y apelldos del empleado</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">+</span> <span class="s">&#39; &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">apellidos</span>
+</div>
+<div class="viewcode-block" id="Empleado.get_edad"><a class="viewcode-back" href="../empleado.html#empleado.Empleado.get_edad">[documentos]</a>    <span class="k">def</span> <span class="nf">get_edad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Metodo get de la edad</span>
+
+<span class="sd">        Este metodo toma el valor de la edad del empleado</span>
+
+<span class="sd">        :return: edad del empleado</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">edad</span>
+</div>
+<div class="viewcode-block" id="Empleado.get_email"><a class="viewcode-back" href="../empleado.html#empleado.Empleado.get_email">[documentos]</a>    <span class="k">def</span> <span class="nf">get_email</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Metodo get del email</span>
+
+<span class="sd">        Este metodo toma el valor del correo electronico del empleado</span>
+
+<span class="sd">        :return: email del empleado</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">email</span>
+</div>
+<div class="viewcode-block" id="Empleado.get_direccion"><a class="viewcode-back" href="../empleado.html#empleado.Empleado.get_direccion">[documentos]</a>    <span class="k">def</span> <span class="nf">get_direccion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Metodo get de la direccion</span>
+
+<span class="sd">        Este metodo toma el valor de la direccion del empleado</span>
+
+<span class="sd">        :return: direccion del empleado</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">direccion</span>
+</div>
+<div class="viewcode-block" id="Empleado.get_salario_mensual"><a class="viewcode-back" href="../empleado.html#empleado.Empleado.get_salario_mensual">[documentos]</a>    <span class="k">def</span> <span class="nf">get_salario_mensual</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Metodo get del salario mensual</span>
+
+<span class="sd">        Este metodo toma el valor del salario mensual del empleado a partir de su</span>
+<span class="sd">        salario anual dividiendolo entre 12</span>
+
+<span class="sd">        :return: salario mensual del empleado</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_salario</span><span class="p">()</span> <span class="o">/</span> <span class="mf">12.0</span>
+</pre></div></div></div>
+
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2014, ldiasae.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b1.
+    </div>
+  </body>
+</html>

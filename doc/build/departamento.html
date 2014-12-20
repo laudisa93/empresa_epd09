@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Documentacion de departamento &mdash; documentación de empresa - v0.3</title>
+    
+    <link rel="stylesheet" href="_static/scrolls.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'v0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="top" title="documentación de empresa - v0.3" href="index.html" />
+    <link rel="next" title="Documentacion de empleado" href="empleado.html" />
+    <link rel="prev" title="Bienvenido a la documentacion del proyecto empresa" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="index.html"
+          title="back to the documentation overview"><span>Documentacion de departamento</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="index.html">&laquo; Bienvenido a la documentacion del proyecto empresa</a> |
+        <a href="#">Documentacion de departamento</a>
+        | <a href="empleado.html">Documentacion de empleado &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        
+  <div class="section" id="module-departamento">
+<span id="documentacion-de-departamento"></span><h1>Documentacion de departamento<a class="headerlink" href="#module-departamento" title="Enlazar permanentemente con este título">¶</a></h1>
+<dl class="class">
+<dt id="departamento.Departamento">
+<em class="property">class </em><code class="descclassname">departamento.</code><code class="descname">Departamento</code><span class="sig-paren">(</span><em>nombre_depto</em>, <em>id_depto</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/departamento.html#Departamento"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#departamento.Departamento" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Esta clase representa el departamento de una empresa</p>
+<dl class="method">
+<dt id="departamento.Departamento.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>nombre_depto</em>, <em>id_depto</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/departamento.html#Departamento.__init__"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#departamento.Departamento.__init__" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Metodo constructor de departamento</p>
+<p>En este metodo se define un objeto de tipo Departamento con sus atributos</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>nombre_depto</strong> (<em>str</em>) &#8211; nombre del departamento</li>
+<li><strong>id_depto</strong> (<em>str</em>) &#8211; numero de identificacion del departamento</li>
+<li><strong>empleados</strong> (<em>list</em>) &#8211; lista de empleados vacia</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="departamento.Departamento.aniadir_empleado">
+<code class="descname">aniadir_empleado</code><span class="sig-paren">(</span><em>empleado</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/departamento.html#Departamento.aniadir_empleado"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#departamento.Departamento.aniadir_empleado" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Metodo aniadir empleado</p>
+<p>Este metodo se usa para aniadir un nuevo empleado a la lista de empleados del departamento</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>empleado</strong> (<a class="reference internal" href="empleado.html#module-empleado" title="empleado"><em>empleado</em></a>) &#8211; empleado que se va a aniadir a la lista de empleados del departamento</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="departamento.Departamento.get_nombre_dpto">
+<code class="descname">get_nombre_dpto</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/departamento.html#Departamento.get_nombre_dpto"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#departamento.Departamento.get_nombre_dpto" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Metodo get nombre del departamento</p>
+<p>Este metodo toma el nombre del departamento</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body">nombre del departamento</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Tipo del valor devuelto:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="departamento.Departamento.get_salario_total">
+<code class="descname">get_salario_total</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/departamento.html#Departamento.get_salario_total"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#departamento.Departamento.get_salario_total" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Metodo get del salario total</p>
+<p>Este metodo toma la suma del salario total de todos los empleados del departamento</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>total</strong> &#8211; variable que guarda la suma de todos los salarios de los empleados del departamento</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body">total</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo del valor devuelto:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="departamento.Departamento.get_salario_total_mensual">
+<code class="descname">get_salario_total_mensual</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/departamento.html#Departamento.get_salario_total_mensual"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#departamento.Departamento.get_salario_total_mensual" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Metodo get salario mensual total</p>
+<p>Este metodo calcula el salario total mensual de todos los empleados del departamento</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body">salario mensual total de todos los empleados del departamento</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Tipo del valor devuelto:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2014, ldiasae.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b1.
+    </div>
+  </body>
+</html>
